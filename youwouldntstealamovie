@@ -1,0 +1,257 @@
+<html>
+<head>
+    <title>Feature Films</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'SerpentineSans';
+            src: url('https://wsxm.neocities.org/serpentine_sans_icg_oblique.ttf') format('truetype');
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .header {
+            font-size: 100px;
+            font-weight: bold;
+            margin-top: 20px;
+            font-family: 'SerpentineSans', Arial, sans-serif;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .blue-bars {
+            margin: 20px 0;
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .blue-bars div {
+            height: 10px;
+            margin: 5px 0;
+        }
+        .blue-bars div:nth-child(1) {
+            background-color: #0000ff;
+            width: 100%;
+        }
+        .blue-bars div:nth-child(2) {
+            background-color: #0055fe;
+            width: 80%;
+        }
+        .blue-bars div:nth-child(3) {
+            background-color: #0179f8;
+            width: 60%;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .content > div {
+            margin: 0 4.5px;
+        }
+        .new-releases, .top-downloaded, .download-favorite, .celebrity-poll {
+            background-color: #333;
+            padding: 20px;
+            width: 221px;
+            text-align: left;
+        }
+        .new-releases {
+            background-color: #ffa500;
+            color: black;
+            position: relative;
+        }
+        .new-releases .highlight {
+            background-color: #ff0000;
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .new-releases div:first-child {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .celebrity-spotlight-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 200px;
+        }
+        .celebrity-name {
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .top-downloaded {
+            color: grey;
+        }
+        .top-downloaded div {
+            text-decoration: underline;
+        }
+        .genres {
+            margin: 20px 0;
+        }
+        .genres span {
+            color: orange;
+            font-weight: bold;
+        }
+        .genres a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Download bar styling with thick grey border */
+        .download-bar {
+            background-color: grey;
+            height: 30px;
+            width: 800px;
+            margin: 20px auto;
+            border-radius: 5px;
+            position: relative;
+            border: 5px solid grey; /* Thick grey border */
+        }
+
+        /* Blue gradient and shadows for the progress bar */
+        .download-progress {
+            background: linear-gradient(to bottom, #ADD8E6, #00008B); /* Gradient: light blue to dark blue */
+            height: 100%;
+            width: 0%; /* Initial width, adjusted dynamically */
+            border-radius: 5px;
+            box-shadow: inset -5px 0 12px rgba(0, 0, 0, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.5); /* Shadows for top and right */
+            transition: width 0.5s ease; /* Smooth transition for progress */
+        }
+
+        /* Updated download button with 3D effect */
+        .download-button {
+            background-color: #047208; /* Original green color */
+            color: black;
+            padding: 10px 20px;
+            font-size: 24px;
+            border: none;
+            border-radius: 0; /* Square corners */
+            cursor: pointer;
+            box-shadow: 
+                inset 0 4px 8px rgba(255, 255, 255, 0.6), /* Prominent white shadow at the top */
+                0 6px 12px rgba(0, 0, 0, 0.8); /* Visible black shadow at the bottom */
+        }
+
+        .split-container {
+            display: flex;
+            flex-direction: column;
+            margin: 0 4.5px;
+        }
+
+        .download-favorite {
+            margin-bottom: 10px;
+            color: grey;
+        }
+
+        .celebrity-poll {
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">FEATURE FILMS</div>
+    <div class="blue-bars">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="content">
+        <div class="new-releases">
+            <div>New Releases:</div>
+            <div class="highlight">
+                <ul>
+                    <li>The Matrix Revolutions</li>
+                    <li>Return Of The King</li>
+                    <li>Cold Mountain</li>
+                </ul>
+            </div>
+            <div class="celebrity-spotlight-title">Celebrity Spotlight:</div>
+            <div class="celebrity-name"><i>Nicole Kidman</i></div>
+        </div>
+        <div class="top-downloaded">
+            <div><u>TOP 10 MOST DOWNLOADED</u></div>
+            <ol>
+                <li>Return Of The King</li>
+                <li>The Cat In The Hat</li>
+                <li>The Matrix Revolutions</li>
+                <li>Paycheck</li>
+                <li>Cheaper By The Dozen</li>
+                <li>Peter Pan</li>
+                <li>Cold Mountain</li>
+                <li>Master And Commander</li>
+                <li>The Last Samurai</li>
+                <li>Mona Lisa Smile</li>
+            </ol>
+        </div>
+        <div class="split-container">
+            <div class="download-favorite">
+                <div>Download Your Favorite:</div>
+                <ul>
+                    <li>Trailers</li>
+                    <li>Featurettes</li>
+                    <li>Movie Posters</li>
+                    <li>Celebrity Photos</li>
+                </ul>
+            </div>
+            <div class="celebrity-poll">
+                <div>Today's Celebrity Poll:</div>
+                <div>Who is your favorite Director?</div>
+                <ul>
+                    <li>Steven Spielberg</li>
+                    <li>Martin Scorsese</li>
+                    <li>Clint Eastwood</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="genres">
+        <span>genres:</span>
+        <a href="#">DRAMA</a>
+        <a href="#">COMEDY</a>
+        <a href="#">ACTION</a>
+        <a href="#">HORROR</a>
+        <a href="#">WESTERN</a>
+        <a href="#">THRILLER</a>
+    </div>
+
+    <!-- Download bar with progress -->
+    <div class="download-bar">
+        <div class="download-progress"></div>
+    </div>
+
+    <button class="download-button">DOWNLOAD</button>
+
+    <script>
+        document.querySelector('.download-button').addEventListener('click', function() {
+            let progress = 0;
+            const progressBar = document.querySelector('.download-progress');
+            const interval = setInterval(() => {
+                if (progress < 100) {
+                    progress += 10; // Increase progress by 10%
+                    progressBar.style.width = progress + '%';
+                } else {
+                    clearInterval(interval); // Stop when done
+                    window.location.href = 'https://www.youtube.com/watch?v=HmZm8vNHBSU'; // Redirect
+                }
+            }, 1000); // Update every second
+        });
+    </script>
+</body>
+</html>
